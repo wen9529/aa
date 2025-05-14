@@ -1,0 +1,4 @@
+node_modules/
+*.log
+npm-debug.log
+users.json  # 如果你之前用过，可以保留，但新结构不直接依赖它
