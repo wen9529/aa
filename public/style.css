@@ -1,0 +1,38 @@
+/* public/style.css */
+body { font-family: sans-serif; margin: 0; background-color: #f0f0f0; }
+.view { padding: 20px; margin: 20px auto; background-color: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); max-width: 800px; }
+.hidden-view { display: none !important; }
+.view-flex { display: flex; flex-direction: column; }
+input, button { padding: 8px; margin: 5px; font-size: 1em; border-radius: 4px; border: 1px solid #ccc; }
+button { background-color: #007bff; color: white; cursor: pointer; }
+button:disabled { background-color: #aaa; }
+.message { margin-top: 10px; padding: 10px; border-radius: 4px; }
+.message.error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb;}
+.message.success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;}
+#roomList { border: 1px solid #eee; padding: 10px; margin-top: 10px; max-height: 200px; overflow-y: auto;}
+.room-item { padding: 5px; border-bottom: 1px solid #f0f0f0; display: flex; justify-content: space-between;}
+
+/* Basic Game View Styles - Needs significant work */
+#roomView { max-width: 100%; height: 100vh; margin: 0; padding: 0; border-radius: 0; box-shadow: none; background-color: #333; color: white;}
+#gameArea { position: relative; flex-grow: 1; padding: 10px; background-color: #444; overflow: hidden;}
+#gameInfoBar { position: absolute; top:0; left:0; right:0; background-color: rgba(0,0,0,0.5); padding: 5px; display:flex; justify-content: space-between; font-size: 0.9em;}
+.playerArea { border: 1px solid #666; padding: 5px; margin: 5px; min-height: 80px; text-align: center; }
+.opponent-area { position: absolute; }
+.opponent-top { top: 10px; left: 50%; transform: translateX(-50%); }
+.opponent-left { top: 150px; left: 10px; }
+.opponent-right { top: 150px; right: 10px; }
+#centerArea { position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); border: 1px dashed #888; padding: 10px; min-width: 200px; min-height: 100px; }
+#playerAreaBottom { position: absolute; bottom: 10px; left: 10px; right: 10px; }
+.myHand { display: flex; flex-wrap: wrap; justify-content: center; padding: 5px; background-color: #555; min-height: 60px; }
+.card {
+    border: 1px solid #aaa; background-color: white; color: black;
+    width: 40px; height: 60px; margin: 2px; display: inline-flex;
+    align-items: center; justify-content: center; font-size: 0.8em; border-radius: 3px;
+    user-select: none;
+}
+.card.selected { border: 2px solid blue; }
+.card.hinted { border: 2px dashed orange; }
+.card.hidden { background-image: url('/images/card-back.png'); background-size:cover; color:transparent; } /* Add a card-back.png to public/images */
+
+#gameOverOverlay { position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1000; justify-content:center; align-items:center;}
+.overlay-content { background:white; color:black; padding:20px; border-radius:5px; text-align:center;}
