@@ -1,4 +1,40 @@
+# Node modules
 node_modules/
+
+# Logs
+logs
 *.log
-npm-debug.log
-users.json  # 如果你之前用过，可以保留，但新结构不直接依赖它
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.idea
+.vscode/
+
+# Optional User Data (if you were using one)
+users.json
+
+# Environment variables file
+.env
+.env.test
+.env.production
+.env.*.local
+
+# Optional lockfiles
+# package-lock.json # 如果你希望团队成员使用精确的依赖版本，可以不忽略它
+# yarn.lock
+
+# Build output
+dist/
+build/
